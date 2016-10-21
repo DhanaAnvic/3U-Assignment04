@@ -22,7 +22,7 @@ public class A4Q1 {
         //ask the user for their name
         System.out.println("Please enter your name:");
         //get the name from the user
-        String name = input.nextLine ();
+        String name = input.nextLine ();    
         //say hello
         System.out.println("Hello " + name);
         System.out.println("How are you today?");
