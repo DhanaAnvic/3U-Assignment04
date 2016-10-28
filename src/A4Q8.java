@@ -18,40 +18,49 @@ public class A4Q8 {
     public static void main(String[] args) {
         // create an input for the user
         Scanner input = new Scanner (System.in);
+        double sum  = 1;
+        while (sum < 100){
         
-        //ask the player to roll the dice
+        // ask the user to roll the dice and what is the sum
         System.out.println("Enter sum of dice:");
-        //create a variable to store in the integer
-        int rolldice = input.nextInt();
-        // create a variable to store in the sum of the dice rolled in
-        int gameone= (rolldice + 1);
-        System.out.println("You are now on square: " + gameone);
+        double num = input.nextDouble();
+        //if the sum is zero
+        if (num == 0){
+            System.out.println("You Quit!");
+        }
+        sum= num + sum;
+        //Tell the user they will end up when landing each snake
+        if (sum == 54) {
+            sum = 19;
+        }
+        if (sum == 90) {
+            sum = 48;
+        }
+        if (sum == 99){
+            sum = 77;
+            
+        }
         
-        // ask the player to roll dice the second time 
-        System.out.println("Enter sum of dice:");
-        int rolldicesec = input.nextInt();
-        int gametwo = ((rolldicesec + rolldice) + 1) ;
-        System.out.println("You are now sqaure: " + gametwo);
-                
-        // create a variable to store in laddder1
-        int ladderone = 0;
+        // tell the usr what suqare will they land if the landed on ladders
         
-        //create a varaible to store in ladder2
-        int laddersecond = 0;
+        if (sum == 9){
+            sum = 34; 
+        }
+        if (sum == 40){
+            sum = 64;
+        }
+        if (sum == 67){
+            sum = 86;
+        }
         
-        //create a variable to store in ladder3 
-        int ladderthird = 0;
+        // tell the user what square they are on
+        System.out.println("You are on square:" + sum);
+        //answers
+        if (sum == 100){
+            System.out.println("Congratulations you won!");
+        }
         
-        // create a varaible to store in snake 1
-        int snakeone = 0;
-        
-        //create a variable to strore in snake 2
-        int snaketwo = 0;
-        
-        // create a variable to store in snake 3
-        int snakethree = 0;
-        
-        
-        
-    }
+   }
 }
+}
+
